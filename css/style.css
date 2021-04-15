@@ -19,11 +19,15 @@ h1 {
   font-weight: normal;
 }
 
-ul#buttonGroup {
+ul#functionalButtons, ul#stylingButtons {
   display: flex;
   margin: 3% 2%;
   list-style: none;
 }
+
+ul#functionalButtons > *, ul#stylingButtons > *{  margin-right: 3%; }
+
+button.stylingButton { padding: 9%; }
 
 div#editorArea { display:flex; }
 

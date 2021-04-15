@@ -2,25 +2,73 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
     <title>Text Editor</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+      href="./css/style.css">
   </head>
   <body>
     <header>
       <h1>Text Editor Online</h1>
-      <ul id="buttonGroup">
+      <ul id="functionalButtons">
         <li>
-          <button id="newFile">New</button>
+          <button id="newFile" class="functionalButton">New</button>
+        </li>
+        <li>
+          <button id="saveFile" class="functionalButton">Save</button>
         </li>
       </ul>
     </header>
     <main>
+      <ul id="stylingButtons">
+        <li>
+          <button id="boldButton" class="stylingButton">B</button>
+        </li>
+        <li>
+          <button id="italicButton" class="stylingButton">I</button>
+        </li>
+        <li>
+          <button id="underlineButton" class="stylingButton">_</button>
+        </li>
+      </ul>
       <div id="editorArea">
         <ol id="rows">
-          <li class="rowNumber">1</li>
+          <li class="rowNumber">01</li>
+          <li class="rowNumber">02</li>
+          <li class="rowNumber">03</li>
+          <li class="rowNumber">04</li>
+          <li class="rowNumber">05</li>
+          <li class="rowNumber">06</li>
+          <li class="rowNumber">07</li>
+          <li class="rowNumber">08</li>
+          <li class="rowNumber">09</li>
+          <li class="rowNumber">10</li>
+          <li class="rowNumber">11</li>
+          <li class="rowNumber">12</li>
+          <li class="rowNumber">13</li>
+          <li class="rowNumber">14</li>
+          <li class="rowNumber">15</li>
+          <li class="rowNumber">16</li>
+          <li class="rowNumber">17</li>
+          <li class="rowNumber">18</li>
+          <li class="rowNumber">19</li>
+          <li class="rowNumber">20</li>
+          <li class="rowNumber">21</li>
+          <li class="rowNumber">22</li>
+          <li class="rowNumber">23</li>
+          <li class="rowNumber">24</li>
+          <li class="rowNumber">25</li>
+          <li class="rowNumber">26</li>
+          <li class="rowNumber">27</li>
+          <li class="rowNumber">28</li>
+          <li class="rowNumber">29</li>
+          <li class="rowNumber">30</li>
         </ol>
-        <textarea cols="44" rows="34" autofocus spellcheck/>
+        <textarea cols="40" 
+          rows="30" 
+          autofocus 
+          spellcheck/>
       </div>
     </main>
     <script src="./js/script.js"></script>
