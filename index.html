@@ -7,29 +7,74 @@
     <title>Text Editor</title>
     <link rel="stylesheet"
       href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Text Editor Online</h1>
       <ul id="functionalButtons">
         <li>
-          <button id="newFile" class="functionalButton">New</button>
+          <button id="newFile" 
+            class="functionalButton">
+            <i data-feather="plus" 
+              class="icon"></i>
+            New
+          </button>
         </li>
         <li>
-          <button id="saveFile" class="functionalButton">Save</button>
+          <button id="saveFile" 
+            class="functionalButton">
+            <i data-feather="download" 
+              class="icon"></i>
+            Save
+          </button>
         </li>
       </ul>
     </header>
     <main>
+      
       <ul id="stylingButtons">
         <li>
-          <button id="boldButton" class="stylingButton">B</button>
+          <button id="boldButton" 
+            class="stylingButton">
+            <span data-feather="bold">bold</span>
+          </button>
         </li>
         <li>
-          <button id="italicButton" class="stylingButton">I</button>
+          <button id="italicButton" 
+            class="stylingButton">
+            <i data-feather="italic"
+              class="icon">Italic</i>
+          </button>
         </li>
         <li>
-          <button id="underlineButton" class="stylingButton">_</button>
+          <button id="underlineButton" 
+            class="stylingButton">
+            <i data-feather="underline"
+              class="icon">Underline</i>
+          </button>
+        </li>
+        <li>
+          <button id="alignLeftButton" 
+            class="stylingButton">
+            <i data-feather="align-left"
+              class="icon">Align Left</i>
+          </button>
+        </li>
+        <li>
+          <button id="alignCenterButton" 
+            class="stylingButton">
+            <i data-feather="align-center"
+              class="icon">Align Center</i>
+          </button>
+        </li>
+        <li>
+          <button id="alignRightButton" 
+            class="stylingButton">
+            <i data-feather="align-right"
+              class="icon">Align Right</i>
+          </button>
         </li>
       </ul>
       <div id="editorArea">
@@ -71,6 +116,7 @@
           spellcheck/>
       </div>
     </main>
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

@@ -13,10 +13,14 @@ header {
   grid-template-rows: 50% 50%;
 }
 
+header, main { background-color: rgb(26, 38, 44); }
+
 h1 {
   text-align: center;
   font-size: 3.5ch;
   font-weight: normal;
+  color: rgb(186, 225, 250);
+  
 }
 
 ul#functionalButtons, ul#stylingButtons {
@@ -25,9 +29,20 @@ ul#functionalButtons, ul#stylingButtons {
   list-style: none;
 }
 
-ul#functionalButtons > *, ul#stylingButtons > *{  margin-right: 3%; }
+ul#functionalButtons > *, ul#stylingButtons > * { margin-right: 1%; }
 
-button.stylingButton { padding: 9%; }
+button.functionalButton, button.stylingButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2ch;
+  width: 60%;
+  border-radius: 10%;
+  border-color: rgb(50, 130, 186);
+  background-color: rgb(50, 130, 186);
+}
+
+svg { width: 40%; }
 
 div#editorArea { display:flex; }
 
@@ -42,6 +57,11 @@ textarea {
   font-size: 1.8ch;
   resize: none;
   word-wrap: normal;
+  background-color: rgb(15, 76, 117);
+  color: rgba(186, 225, 250, 0.75);
 }
 
-li.rowNumber { font-size: 1.7ch; }
+li.rowNumber {
+  font-size: 1.7ch;
+  color: rgba(186, 225, 250, 0.4);
+}
