@@ -20,12 +20,13 @@ h1 {
   font-size: 3.5ch;
   font-weight: normal;
   color: rgb(186, 225, 250);
-  
 }
 
 ul#functionalButtons, ul#stylingButtons {
   display: flex;
+  align-items: space-around;
   margin: 3% 2%;
+  margin-left: 6%;
   list-style: none;
 }
 
@@ -49,16 +50,24 @@ div#editorArea { display:flex; }
 ol#rows {
   display: flex;
   flex-direction: column;
+  align-items: space-around;
+  justify-items: space-around;
   padding-right: 3%;
   list-style: none;
 }
 
 textarea {
-  font-size: 1.8ch;
+  font-size: 1.7ch;
   resize: none;
   word-wrap: normal;
   background-color: rgb(15, 76, 117);
   color: rgba(186, 225, 250, 0.75);
+  line-height: 120%;
+  
+}
+
+textarea::placeholder {
+  color: rgba(186, 225, 250, 0.45);
 }
 
 li.rowNumber {

@@ -7,8 +7,6 @@
     <title>Text Editor</title>
     <link rel="stylesheet"
       href="./css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
   </head>
   <body>
     <header>
@@ -17,56 +15,56 @@
         <li>
           <button id="newFile" 
             class="functionalButton">
-            <i data-feather="plus" 
-              class="icon"></i>
+            <i data-feather="plus"></i>
             New
           </button>
         </li>
         <li>
           <button id="saveFile" 
             class="functionalButton">
-            <i data-feather="download" 
-              class="icon"></i>
+            <i data-feather="download"></i>
             Save
+          </button>
+        </li>
+        <li>
+          <button id="changeFont" 
+            class="functionalButton">
+            <i data-feather="type"></i>
+            Font
           </button>
         </li>
       </ul>
     </header>
     <main>
-      
       <ul id="stylingButtons">
         <li>
           <button id="boldButton" 
             class="stylingButton">
-            <span data-feather="bold">bold</span>
+            <i data-feather="bold">Bold</i>
           </button>
         </li>
         <li>
           <button id="italicButton" 
             class="stylingButton">
-            <i data-feather="italic"
-              class="icon">Italic</i>
+            <i data-feather="italic">Italic</i>
           </button>
         </li>
         <li>
           <button id="underlineButton" 
             class="stylingButton">
-            <i data-feather="underline"
-              class="icon">Underline</i>
+            <i data-feather="underline">Underline</i>
           </button>
         </li>
         <li>
           <button id="alignLeftButton" 
             class="stylingButton">
-            <i data-feather="align-left"
-              class="icon">Align Left</i>
+            <i data-feather="align-left">Align Left</i>
           </button>
         </li>
         <li>
           <button id="alignCenterButton" 
             class="stylingButton">
-            <i data-feather="align-center"
-              class="icon">Align Center</i>
+            <i data-feather="align-center">Align Center</i>
           </button>
         </li>
         <li>
@@ -79,41 +77,14 @@
       </ul>
       <div id="editorArea">
         <ol id="rows">
-          <li class="rowNumber">01</li>
-          <li class="rowNumber">02</li>
-          <li class="rowNumber">03</li>
-          <li class="rowNumber">04</li>
-          <li class="rowNumber">05</li>
-          <li class="rowNumber">06</li>
-          <li class="rowNumber">07</li>
-          <li class="rowNumber">08</li>
-          <li class="rowNumber">09</li>
-          <li class="rowNumber">10</li>
-          <li class="rowNumber">11</li>
-          <li class="rowNumber">12</li>
-          <li class="rowNumber">13</li>
-          <li class="rowNumber">14</li>
-          <li class="rowNumber">15</li>
-          <li class="rowNumber">16</li>
-          <li class="rowNumber">17</li>
-          <li class="rowNumber">18</li>
-          <li class="rowNumber">19</li>
-          <li class="rowNumber">20</li>
-          <li class="rowNumber">21</li>
-          <li class="rowNumber">22</li>
-          <li class="rowNumber">23</li>
-          <li class="rowNumber">24</li>
-          <li class="rowNumber">25</li>
-          <li class="rowNumber">26</li>
-          <li class="rowNumber">27</li>
-          <li class="rowNumber">28</li>
-          <li class="rowNumber">29</li>
-          <li class="rowNumber">30</li>
+          <li class="rowNumber" 
+            value=1>1</li>
         </ol>
         <textarea cols="40" 
           rows="30" 
           autofocus 
-          spellcheck/>
+          spellcheck
+          placeholder="Type something..."/>
       </div>
     </main>
     <script src="https://unpkg.com/feather-icons"></script>
