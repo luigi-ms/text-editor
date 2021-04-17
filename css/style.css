@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+  --main-bg-color: rgb(27, 38, 44);
+  --main-text-color: rgb(187, 225, 250);
+  --textField-bg-color: rgb(15, 76, 117);
+  --textField-font-color: rgba(187, 225, 250, 0.75);
+  --button-color: rgb(50, 130, 184);
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: 'Ubuntu', 'Arial', sans-serif;
+  font-weight: normal;
 }
 
 body > * { padding: 3%; }
@@ -14,8 +23,8 @@ header {
 }
 
 header, main {
-  background-color: rgb(26, 38, 44);
-  width: 100vw;
+  background-color: var(--main-bg-color);
+  width: 95vw;
 }
 
 header { height: 15vh; }
@@ -25,8 +34,8 @@ main { height: 85vh; }
 h1 {
   text-align: center;
   font-size: 3.5ch;
-  font-weight: normal;
-  color: rgb(186, 225, 250);
+  color: var(--main-text-color);
+  text-shadow: 10px 0px 5px rgb(27, 27, 47);
 }
 
 ul#functionalButtons, ul#stylingButtons {
@@ -46,9 +55,13 @@ button.functionalButton, button.stylingButton {
   font-size: 1.2ch;
   width: 60%;
   border-radius: 10%;
-  border-color: rgb(50, 130, 186);
-  background-color: rgb(50, 130, 186);
+  border-color: var(--button-color);
+  background-color: var(--button-color);
+  color: var(--main-text-color);
+  text-shadow: 1px 1px 5px rgb(27, 27, 47);
 }
+
+button.stylingButton:active, button.functionalButton:active { background-color: rgba(50, 130, 184, 0.6); }
 
 svg { width: 40%; }
 
@@ -64,13 +77,14 @@ ol#rows {
 }
 
 textarea {
-  font-size: 1.7ch;
+  font-size: 1.5ch;
   resize: none;
-  word-wrap: normal;
-  background-color: rgb(15, 76, 117);
-  color: rgba(186, 225, 250, 0.75);
+  word-wrap: break-word;
+  background-color: var(--textField-bg-color);
+  color: var(--textField-font-color);
   line-height: 120%;
-  width: 88vw;
+  width: 86vw;
+  padding: 1%;
 }
 
 textarea::placeholder { color: rgba(186, 225, 250, 0.45); }
