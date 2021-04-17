@@ -13,7 +13,14 @@ header {
   grid-template-rows: 50% 50%;
 }
 
-header, main { background-color: rgb(26, 38, 44); }
+header, main {
+  background-color: rgb(26, 38, 44);
+  width: 100vw;
+}
+
+header { height: 15vh; }
+
+main { height: 85vh; }
 
 h1 {
   text-align: center;
@@ -63,12 +70,10 @@ textarea {
   background-color: rgb(15, 76, 117);
   color: rgba(186, 225, 250, 0.75);
   line-height: 120%;
-  
+  width: 90%;
 }
 
-textarea::placeholder {
-  color: rgba(186, 225, 250, 0.45);
-}
+textarea::placeholder { color: rgba(186, 225, 250, 0.45); }
 
 li.rowNumber {
   font-size: 1.7ch;
