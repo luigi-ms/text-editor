@@ -70,7 +70,7 @@ textarea {
   background-color: rgb(15, 76, 117);
   color: rgba(186, 225, 250, 0.75);
   line-height: 120%;
-  width: 90%;
+  width: 88vw;
 }
 
 textarea::placeholder { color: rgba(186, 225, 250, 0.45); }
