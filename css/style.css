@@ -40,7 +40,6 @@ h1 {
 
 ul#functionalButtons, ul#stylingButtons {
   display: flex;
-  align-items: space-around;
   margin: 3% 2%;
   margin-left: 6%;
   list-style: none;
@@ -70,19 +69,19 @@ div#editorArea { display:flex; }
 ol#rows {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
-  justify-items: space-around;
+  align-content: center;
   padding-right: 3%;
   list-style: none;
+  margin-top: 1.3%;
 }
 
 textarea {
-  font-size: 1.5ch;
+  font-size: 1.6ch;
   resize: none;
   word-wrap: break-word;
   background-color: var(--textField-bg-color);
   color: var(--textField-font-color);
-  line-height: 120%;
+  line-height: 119%;
   width: 86vw;
   padding: 1%;
 }

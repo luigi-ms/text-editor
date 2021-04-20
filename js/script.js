@@ -11,8 +11,8 @@ const ENTER = 13,
 BACKSPACE = 8, 
 DELETE = 46;
 
-let totalRows = 0,
-counterAuxRows = 0,
+let totalLines = 0,
+showedRows = 0,
 caretPosition = 0;
 
 function boldIt(event){
@@ -42,14 +42,15 @@ function underlineIt(event){
   }
 }
 
-function addNewLine(totalLines){
+function addNewLine(){
   let newLine = document.createElement('li');
   newLine.className = 'rowNumber';
-  newLine.innerText = totalLines+1;
+  newLine.innerText = showedRows;
   rows.appendChild(newLine);
 }
 
 function removeLastLine(){
+  showedRows -= 1;
   rows.removeChild(rows.lastChild);
 }
 
@@ -59,21 +60,21 @@ underlineButton.addEventListener('click', underlineIt);
 alignLeftButton.addEventListener('click', event => textArea.style.textAlign = 'left');
 alignCenterButton.addEventListener('click', event => textArea.style.textAlign = 'center');
 alignRightButton.addEventListener('click', event => textArea.style.textAlign = 'right');
+textArea.addEventListener('keyup', event => caretPosition = event.target.selectionStart);
 
 textArea.addEventListener('keydown', (event) => {
   if(event.keyCode === ENTER){
-    totalRows = textArea.value.split(/\r\n|\r|\n/).length;
-    countAuxRows = totalRows;
-    addNewLine(countRows);
-  }else if(event.keyCode === BACKSPACE || event.keyCode === DELETE){
-    totalRows = textArea.value.split(/\r\n|\r|\n/).length;
-    if(countAuxRows < totalRows){
-      countAuxRows -= 1;
-      removeLastLine();
-    }
+    totalLines = textArea.value.split(/\n/).length;
+    showedRows = totalLines + 1;
+    addNewLine();
   }
 });
 
-textArea.addEventListener('keyup', event => caretPosition = event.target.selectionStart);
+textArea.addEventListener('input', (event) => {
+  totalLines = textArea.value.split(/\n/).length;
+  if (showedRows > totalLines && totalLines > 1) {
+    removeLastLine();
+  }
+});
 
 feather.replace();
