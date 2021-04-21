@@ -7,12 +7,10 @@ const alignLeftButton = document.querySelector("#alignLeftButton");
 const alignCenterButton = document.querySelector("#alignCenterButton");
 const alignRightButton = document.querySelector("#alignRightButton");
 
-const ENTER = 13, 
-BACKSPACE = 8, 
-DELETE = 46;
+const enter = 13;
 
 let totalLines = 0,
-showedRows = 0,
+showedRows = 1,
 caretPosition = 0;
 
 function boldIt(event){
@@ -63,7 +61,7 @@ alignRightButton.addEventListener('click', event => textArea.style.textAlign = '
 textArea.addEventListener('keyup', event => caretPosition = event.target.selectionStart);
 
 textArea.addEventListener('keydown', (event) => {
-  if(event.keyCode === ENTER){
+  if(event.keyCode === enter){
     totalLines = textArea.value.split(/\n/).length;
     showedRows = totalLines + 1;
     addNewLine();
@@ -72,7 +70,7 @@ textArea.addEventListener('keydown', (event) => {
 
 textArea.addEventListener('input', (event) => {
   totalLines = textArea.value.split(/\n/).length;
-  if (showedRows > totalLines && totalLines > 1) {
+  if (showedRows > totalLines && totalLines >= 1) {
     removeLastLine();
   }
 });

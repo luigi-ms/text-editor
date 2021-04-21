@@ -92,3 +92,7 @@ li.rowNumber {
   font-size: 1.7ch;
   color: rgba(186, 225, 250, 0.4);
 }
+
+.boldIt[--nth-letter='2']{
+  font-weight: bold;
+}
