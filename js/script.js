@@ -6,29 +6,30 @@ const alignLeftButton = document.querySelector("#alignLeftButton");
 const alignCenterButton = document.querySelector("#alignCenterButton");
 const alignRightButton = document.querySelector("#alignRightButton");
 
-function createSpan(text, style='bold'){
- let span = document.createElement('span');
+function createSpan(text, style='bold', parent=textField){
+  let span = document.createElement('span');
  
- span.innerText = text;
- span.contentEditable = false;
+  span.innerText = text;
+  span.contentEditable = false;
  
- if(style === 'bold'){
-   span.style.fontWeight = style;
- } else if(style === 'italic'){
-   span.style.fontStyle = style;
- } else {
-   span.style.textDecoration = style;
- }
+  if(style === 'bold'){
+    span.style.fontWeight = style;
+  } else if(style === 'italic'){
+    span.style.fontStyle = style;
+  } else {
+    span.style.textDecoration = style;
+  }
  
- textField.appendChild(span); 
+  parent.appendChild(span); 
 }
 
 function styleText(style){
   let selected = document.getSelection();
   let text = selected.toString();
+  let selectedParent = selected.anchorNode.parentNode;
   selected.deleteFromDocument();
   
-  createSpan(text, style);
+  createSpan(text, style, selectedParent);
 }
 
 boldButton.addEventListener('click', event => styleText('bold'));
