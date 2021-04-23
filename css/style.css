@@ -64,35 +64,15 @@ button.stylingButton:active, button.functionalButton:active { background-color: 
 
 svg { width: 40%; }
 
-div#editorArea { display:flex; }
-
-ol#rows {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  padding-right: 3%;
-  list-style: none;
-  margin-top: 1.3%;
-}
-
-textarea {
+#textfield {
   font-size: 1.6ch;
-  resize: none;
   word-wrap: break-word;
   background-color: var(--textField-bg-color);
   color: var(--textField-font-color);
   line-height: 119%;
   width: 86vw;
+  height: 50vh;
   padding: 1%;
-}
-
-textarea::placeholder { color: rgba(186, 225, 250, 0.45); }
-
-li.rowNumber {
-  font-size: 1.7ch;
-  color: rgba(186, 225, 250, 0.4);
-}
-
-.boldIt[--nth-letter='2']{
-  font-weight: bold;
+  outline: none;
+  margin: auto 2.5vw;
 }

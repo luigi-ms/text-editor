@@ -1,5 +1,4 @@
-const textArea = document.querySelector("textarea");
-const rows = document.querySelector("#rows");
+const textArea = document.querySelector("#textfield");
 const boldButton = document.querySelector("#boldButton");
 const italicButton = document.querySelector("#italicButton");
 const underlineButton = document.querySelector("#underlineButton");
@@ -9,17 +8,19 @@ const alignRightButton = document.querySelector("#alignRightButton");
 
 const enter = 13;
 
-let totalLines = 0,
-showedRows = 1,
-caretPosition = 0;
+// trocado textarea por div
 
 function boldIt(event){
   const isBold = (textArea.style.fontWeight === 'bold');
-  if(isBold){
+  let text = document.getSelection().toString();
+  let newText = textArea.value.replace(text, '<b>'+text+'</b>');
+  
+  
+  /*if(isBold){
     textArea.style.fontWeight = 'normal';
   } else {
     textArea.style.fontWeight = 'bold';
-  }
+  } */console.log('done?')
 }
 
 function italicIt(event){
@@ -52,6 +53,14 @@ function removeLastLine(){
   rows.removeChild(rows.lastChild);
 }
 
+function addElement(){
+  let newLine = document.createElement('p');
+  newLine.contentEditable = true;
+  textArea.appendChild(newLine);
+  newLine.focus();
+}
+
+
 boldButton.addEventListener('click', boldIt);
 italicButton.addEventListener('click', italicIt);
 underlineButton.addEventListener('click', underlineIt);
@@ -59,20 +68,5 @@ alignLeftButton.addEventListener('click', event => textArea.style.textAlign = 'l
 alignCenterButton.addEventListener('click', event => textArea.style.textAlign = 'center');
 alignRightButton.addEventListener('click', event => textArea.style.textAlign = 'right');
 textArea.addEventListener('keyup', event => caretPosition = event.target.selectionStart);
-
-textArea.addEventListener('keydown', (event) => {
-  if(event.keyCode === enter){
-    totalLines = textArea.value.split(/\n/).length;
-    showedRows = totalLines + 1;
-    addNewLine();
-  }
-});
-
-textArea.addEventListener('input', (event) => {
-  totalLines = textArea.value.split(/\n/).length;
-  if (showedRows > totalLines && totalLines >= 1) {
-    removeLastLine();
-  }
-});
 
 feather.replace();
