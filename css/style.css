@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 :root {
   --main-bg-color: rgb(27, 38, 44);
@@ -11,25 +12,38 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', 'Arial', sans-serif;
   font-weight: normal;
 }
 
-body > * { padding: 3%; }
+body { background-color: var(--main-bg-color); }
+
+header, main {
+  width: 90vw;
+  padding: 3%;
+  font-family: 'Ubuntu', 'Arial', sans-serif;
+}
 
 header {
   display: grid;
   grid-template-rows: 50% 50%;
+  height: 15vh;
 }
-
-header, main {
-  background-color: var(--main-bg-color);
-  width: 95vw;
-}
-
-header { height: 15vh; }
 
 main { height: 85vh; }
+
+div#textfield {
+  width: 86vw;
+  margin: 2.5vh 2.5vw;
+  height: 50vh;
+  padding: 2%;
+  outline: none;
+  font-size: 1.6ch;
+  font-family: 'Merriweather', serif;
+  word-wrap: break-word;
+  background-color: var(--textField-bg-color);
+  color: var(--textField-font-color);
+  line-height: 119%;
+}
 
 h1 {
   text-align: center;
@@ -40,19 +54,21 @@ h1 {
 
 ul#functionalButtons, ul#stylingButtons {
   display: flex;
-  margin: 3% 2%;
-  margin-left: 6%;
+  justify-content: space-around;
+  margin: 3% 2% 3% 8%;
   list-style: none;
 }
 
-ul#functionalButtons > *, ul#stylingButtons > * { margin-right: 1%; }
+li { margin-right: 1%; }
 
-button.functionalButton, button.stylingButton {
+li.offline-li { margin-right: 4%; }
+
+button {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 1.2ch;
-  width: 60%;
+  width: 30vw;
   border-radius: 10%;
   border-color: var(--button-color);
   background-color: var(--button-color);
@@ -60,19 +76,10 @@ button.functionalButton, button.stylingButton {
   text-shadow: 1px 1px 5px rgb(27, 27, 47);
 }
 
-button.stylingButton:active, button.functionalButton:active { background-color: rgba(50, 130, 184, 0.6); }
+button.offline-btn {
+  width: 11vw;
+  height: 5vh;
+  font-size: 1.3ch;
+}
 
 svg { width: 40%; }
-
-#textfield {
-  font-size: 1.6ch;
-  word-wrap: break-word;
-  background-color: var(--textField-bg-color);
-  color: var(--textField-font-color);
-  line-height: 119%;
-  width: 86vw;
-  height: 50vh;
-  padding: 2%;
-  outline: none;
-  margin: auto 2.5vw;
-}

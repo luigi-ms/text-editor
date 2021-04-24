@@ -39,4 +39,9 @@ alignLeftButton.addEventListener('click', event => textField.style.textAlign = '
 alignCenterButton.addEventListener('click', event => textField.style.textAlign = 'center');
 alignRightButton.addEventListener('click', event => textField.style.textAlign = 'right');
 
-feather.replace();
+if(typeof(feather) === undefined){
+  feather.replace();
+}else{
+  document.querySelectorAll("button").forEach(btn => btn.className = 'offline-btn');
+  document.querySelectorAll("li").forEach(item => item.className = 'offline-li');
+}
