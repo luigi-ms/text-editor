@@ -13,10 +13,12 @@
   margin: 0;
   padding: 0;
   font-weight: normal;
-  font-size: 12pt;
 }
 
-body { background-color: var(--main-bg-color); }
+body {
+  background-color: var(--main-bg-color);
+  font-size: 16px;
+}
 
 header, main {
   width: 90vw;
@@ -38,18 +40,18 @@ div#textfield {
   height: 50vh;
   padding: 2%;
   outline: none;
-  font-size: 1.6ch;
+  font-size: 0.9rem;
   font-family: 'Merriweather', 'Times New Roman',serif;
   word-wrap: break-word;
   background-color: var(--textField-bg-color);
   color: var(--textField-font-color);
   border: 1px double var(--main-text-color);
-  line-height: 119%;
+  line-height: 150%;
 }
 
 h1 {
   text-align: center;
-  font-size: 3.5ch;
+  font-size: 1.777rem;
   color: var(--main-text-color);
   text-shadow: 10px 0px 5px rgb(27, 27, 47);
 }
@@ -69,7 +71,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.2ch;
+  font-size: 0.75rem;
   width: 15vw;
   height: 5vh;
   border-radius: 10%;
@@ -86,7 +88,6 @@ button.stylingButton {
 button.offline-btn {
   width: 11vw;
   height: 5vh;
-  font-size: 1.3ch;
 }
 
 span[data-hidden="true"]{

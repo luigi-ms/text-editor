@@ -6,7 +6,7 @@ const alignLeftButton = document.querySelector("#alignLeftButton");
 const alignCenterButton = document.querySelector("#alignCenterButton");
 const alignRightButton = document.querySelector("#alignRightButton");
 
-function createSpan(text, style='bold', parent=textField){
+function createSpan(text='foo', style='normal', parent=textField){
   let span = document.createElement('span');
  
   span.innerText = text;
